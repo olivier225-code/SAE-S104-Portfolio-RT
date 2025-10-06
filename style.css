@@ -1,0 +1,320 @@
+/* ------------------------------------------- */
+/* BUT R&T S104 - STYLE.CSS (Thème Professionnel/Code)   */
+/* ------------------------------------------- */
+
+/* 1. Reset et Typographie de base */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Roboto Mono', monospace; /* Police technique */
+    background-color: #1E1E1E; /* Fond Gris Anthracite (Sombre et Pro) */
+    color: #D4D4D4; /* Texte Blanc Cassé/Gris Clair */
+    line-height: 1.6;
+    scroll-behavior: smooth;
+}
+
+/* 2. Couleurs et Variables */
+:root {
+    --color-primary: #569CD6; /* Bleu/Cyan pour les accents et liens (comme les mots-clés de code) */
+    --color-secondary: #C586C0; /* Violet pour les titres ou commandes */
+    --color-background-dark: #000000; /* Fond très sombre pour les cartes */
+}
+
+
+/* ------------------------------------------- */
+/* 3. Structure et Conteneurs */
+/* ------------------------------------------- */
+
+.container {
+    width: 90%;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+main {
+    padding: 40px 0;
+    min-height: 80vh;
+}
+
+/* Conteneur principal simulant la fenêtre de Terminal/IDE */
+.terminal-container {
+    width: 90%;
+    max-width: 900px;
+    margin: 40px auto;
+    background-color: #252526; /* Gris légèrement plus clair que le fond */
+    border: 1px solid #333333;
+    padding: 30px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.5); 
+}
+
+
+/* ------------------------------------------- */
+/* 4. Typographie et Commandes Console */
+/* ------------------------------------------- */
+
+h1 { color: #FFFFFF; font-size: 2.2em; margin-bottom: 0.5em;}
+h2 {
+    font-size: 1.6em;
+    border-bottom: 2px solid var(--color-primary); /* Ligne bleue/cyan */
+    padding-bottom: 5px;
+    margin-bottom: 1em;
+    color: var(--color-primary); /* Titres en bleu/cyan */
+}
+h3 { font-size: 1.2em; color: var(--color-secondary); margin-bottom: 0.5em; }
+
+.console-line {
+    margin-bottom: 1.5em;
+}
+.prompt {
+    color: #FFFFFF; /* Nom d'utilisateur/Machine en blanc */
+    font-weight: 700;
+}
+.command {
+    color: #FFD700; /* Commande en jaune (comme une fonction) */
+}
+
+ul { 
+    list-style: none; /* Enlève les carrés */
+    margin-left: 0;
+    padding-left: 20px;
+}
+ul li::before {
+    content: "// "; /* Ajoute un commentaire style code devant les listes */
+    color: var(--color-secondary);
+    font-weight: 700;
+    margin-right: 5px;
+}
+
+
+/* ------------------------------------------- */
+/* 5. Header et Navigation */
+/* ------------------------------------------- */
+
+header {
+    background-color: #000000;
+    padding: 15px 0;
+    border-bottom: 3px solid var(--color-primary);
+}
+
+header h1 {
+    display: inline-block;
+    font-size: 1.5em;
+    margin: 0;
+}
+
+nav {
+    float: right;
+    margin-top: 5px;
+}
+
+nav a {
+    color: var(--color-primary);
+    text-decoration: none;
+    padding: 8px 15px;
+    transition: background-color 0.3s, color 0.3s;
+    margin-left: 10px;
+    border: 1px solid transparent;
+}
+
+nav a:hover, nav a.active {
+    background-color: var(--color-primary);
+    color: #000000;
+    font-weight: 700;
+    border-color: var(--color-primary);
+}
+
+/* ------------------------------------------- */
+/* 6. Sections Contenu (Accueil & Compétences) */
+/* ------------------------------------------- */
+
+.grid-section {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    margin-top: 20px;
+    margin-bottom: 40px;
+}
+
+.qualite-card, .project-card {
+    background-color: #181818; /* Fond très sombre pour les cartes */
+    padding: 20px;
+    border-left: 3px solid var(--color-secondary); /* Ligne violette pour accent */
+    flex: 1 1 calc(33.33% - 20px); 
+    min-width: 250px;
+    transition: transform 0.3s;
+}
+.qualite-card:hover, .project-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.4);
+    border-color: var(--color-primary);
+}
+
+.experience {
+    margin-bottom: 25px;
+    padding: 15px;
+    border: 1px solid #333333;
+}
+.experience h3 { margin-bottom: 0.2em; color: #FFFFFF; }
+.experience .date { font-style: italic; color: #999999; margin-bottom: 10px; }
+
+/* Barres de Compétences */
+.skills-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+    gap: 20px;
+    margin-bottom: 40px;
+}
+.skill-item p { margin-bottom: 5px; }
+.skill-bar {
+    background-color: #333333;
+    height: 15px;
+    border-radius: 5px;
+    overflow: hidden;
+}
+.skill-level {
+    background-color: var(--color-primary); /* Bleu/Cyan pour la progression */
+    height: 100%;
+    animation: fill-skill 1s ease-out forwards; 
+}
+@keyframes fill-skill {
+    from { width: 0; }
+}
+
+/* ------------------------------------------- */
+/* 7. Boutons et Formulaire de Contact */
+/* ------------------------------------------- */
+
+.button {
+    display: inline-block;
+    background-color: var(--color-primary);
+    color: #000000;
+    padding: 10px 20px;
+    text-decoration: none;
+    font-weight: 700;
+    border: none;
+    cursor: pointer;
+    transition: background-color 0.3s, box-shadow 0.3s;
+    margin-top: 20px;
+    text-transform: uppercase;
+}
+
+.button:hover {
+    background-color: #7AD6FF; /* Bleu plus clair au survol */
+    box-shadow: 0 0 10px var(--color-primary);
+}
+
+.secondary {
+    background-color: #333333;
+    color: var(--color-primary);
+    border: 1px solid var(--color-primary);
+}
+.secondary:hover {
+    background-color: var(--color-primary);
+    color: #000000;
+}
+
+.contact-links {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    margin-top: 20px;
+}
+
+.contact-button {
+    width: 100%;
+    text-align: center;
+    margin-top: 0;
+}
+
+form {
+    background-color: #181818;
+    padding: 25px;
+    border: 1px solid #333333;
+    display: flex;
+    flex-direction: column;
+    margin-top: 20px;
+}
+label {
+    margin-top: 15px;
+    margin-bottom: 5px;
+    font-weight: 700;
+    color: var(--color-secondary); /* Étiquettes en violet */
+}
+input[type="text"], input[type="email"], textarea {
+    padding: 10px;
+    background-color: var(--color-background-dark);
+    border: 1px solid #555555;
+    color: #FFFFFF;
+    font-family: 'Roboto Mono', monospace;
+    font-size: 1em;
+}
+input:focus, textarea:focus {
+    border-color: var(--color-primary);
+    outline: none;
+}
+
+.note-reflexion {
+    font-size: 0.9em;
+    color: #999999;
+    margin-top: 20px;
+    padding: 10px;
+    border-left: 3px solid var(--color-secondary);
+}
+
+/* ------------------------------------------- */
+/* 8. Footer */
+/* ------------------------------------------- */
+
+footer {
+    background-color: #000000;
+    color: #777777;
+    text-align: center;
+    padding: 15px 0;
+    border-top: 1px solid #333333;
+}
+
+/* ------------------------------------------- */
+/* 9. Media Queries (Responsive Design) */
+/* ------------------------------------------- */
+
+@media (max-width: 768px) {
+    
+    header h1 {
+        display: block;
+        text-align: center;
+    }
+    nav {
+        float: none;
+        text-align: center;
+        margin-top: 10px;
+        display: block;
+    }
+    nav a {
+        display: block; 
+        margin: 5px 0;
+        padding: 5px 10px;
+    }
+    
+    .terminal-container {
+        width: 95%;
+        padding: 15px;
+        margin: 20px auto;
+    }
+
+    .grid-section {
+        flex-direction: column;
+    }
+
+    .qualite-card, .project-card {
+        flex-basis: 100%;
+        min-width: auto;
+    }
+
+    .skills-grid {
+        grid-template-columns: 1fr; 
+    }
+}
