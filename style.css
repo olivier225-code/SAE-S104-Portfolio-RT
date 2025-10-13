@@ -5,17 +5,17 @@
 }
 
 body {
-    font-family: 'Roboto Mono', monospace; /* Police technique */
-    background-color: #1E1E1E; /* Fond Gris Anthracite (Sombre et Pro) */
-    color: #D4D4D4; /* Texte Blanc Cassé/Gris Clair */
+    font-family: 'Roboto Mono', monospace; 
+    background-color: #1E1E1E; 
+    color: #D4D4D4; 
     line-height: 1.6;
     scroll-behavior: smooth;
 }
 
 :root {
-    --color-primary: #569CD6; /* Bleu/Cyan pour les accents et liens (comme les mots-clés de code) */
-    --color-secondary: #C586C0; /* Violet pour les titres ou commandes */
-    --color-background-dark: #000000; /* Fond très sombre pour les cartes */
+    --color-primary: #569CD6; 
+    --color-secondary: #C586C0; 
+    --color-background-dark: #000000; 
 }
 
 
