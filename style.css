@@ -1,9 +1,4 @@
-/* ------------------------------------------- */
-/* BUT R&T S104 - STYLE.CSS (Thème Professionnel/Code)   */
-/* ------------------------------------------- */
-
-/* 1. Reset et Typographie de base */
-* {
+ {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
@@ -17,7 +12,6 @@ body {
     scroll-behavior: smooth;
 }
 
-/* 2. Couleurs et Variables */
 :root {
     --color-primary: #569CD6; /* Bleu/Cyan pour les accents et liens (comme les mots-clés de code) */
     --color-secondary: #C586C0; /* Violet pour les titres ou commandes */
@@ -25,9 +19,6 @@ body {
 }
 
 
-/* ------------------------------------------- */
-/* 3. Structure et Conteneurs */
-/* ------------------------------------------- */
 
 .container {
     width: 90%;
@@ -40,21 +31,17 @@ main {
     min-height: 80vh;
 }
 
-/* Conteneur principal simulant la fenêtre de Terminal/IDE */
 .terminal-container {
     width: 90%;
     max-width: 900px;
     margin: 40px auto;
-    background-color: #252526; /* Gris légèrement plus clair que le fond */
+    background-color: #252526; 
     border: 1px solid #333333;
     padding: 30px;
     box-shadow: 0 5px 15px rgba(0, 0, 0, 0.5); 
 }
 
 
-/* ------------------------------------------- */
-/* 4. Typographie et Commandes Console */
-/* ------------------------------------------- */
 
 h1 { color: #FFFFFF; font-size: 2.2em; margin-bottom: 0.5em;}
 h2 {
@@ -70,29 +57,25 @@ h3 { font-size: 1.2em; color: var(--color-secondary); margin-bottom: 0.5em; }
     margin-bottom: 1.5em;
 }
 .prompt {
-    color: #FFFFFF; /* Nom d'utilisateur/Machine en blanc */
+    color: #FFFFFF; 
     font-weight: 700;
 }
 .command {
-    color: #FFD700; /* Commande en jaune (comme une fonction) */
+    color: #FFD700; 
 }
 
-ul { 
-    list-style: none; /* Enlève les carrés */
+ul {
+    list-style: none;
     margin-left: 0;
     padding-left: 20px;
 }
 ul li::before {
-    content: "// "; /* Ajoute un commentaire style code devant les listes */
+    content: "// "; 
     color: var(--color-secondary);
     font-weight: 700;
     margin-right: 5px;
 }
 
-
-/* ------------------------------------------- */
-/* 5. Header et Navigation */
-/* ------------------------------------------- */
 
 header {
     background-color: #000000;
@@ -127,9 +110,6 @@ nav a:hover, nav a.active {
     border-color: var(--color-primary);
 }
 
-/* ------------------------------------------- */
-/* 6. Sections Contenu (Accueil & Compétences) */
-/* ------------------------------------------- */
 
 .grid-section {
     display: flex;
@@ -140,9 +120,9 @@ nav a:hover, nav a.active {
 }
 
 .qualite-card, .project-card {
-    background-color: #181818; /* Fond très sombre pour les cartes */
+    background-color: #181818;
     padding: 20px;
-    border-left: 3px solid var(--color-secondary); /* Ligne violette pour accent */
+    border-left: 3px solid var(--color-secondary);
     flex: 1 1 calc(33.33% - 20px); 
     min-width: 250px;
     transition: transform 0.3s;
@@ -161,7 +141,6 @@ nav a:hover, nav a.active {
 .experience h3 { margin-bottom: 0.2em; color: #FFFFFF; }
 .experience .date { font-style: italic; color: #999999; margin-bottom: 10px; }
 
-/* Barres de Compétences */
 .skills-grid {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
@@ -176,7 +155,7 @@ nav a:hover, nav a.active {
     overflow: hidden;
 }
 .skill-level {
-    background-color: var(--color-primary); /* Bleu/Cyan pour la progression */
+    background-color: var(--color-primary); 
     height: 100%;
     animation: fill-skill 1s ease-out forwards; 
 }
@@ -184,9 +163,7 @@ nav a:hover, nav a.active {
     from { width: 0; }
 }
 
-/* ------------------------------------------- */
-/* 7. Boutons et Formulaire de Contact */
-/* ------------------------------------------- */
+
 
 .button {
     display: inline-block;
@@ -203,7 +180,7 @@ nav a:hover, nav a.active {
 }
 
 .button:hover {
-    background-color: #7AD6FF; /* Bleu plus clair au survol */
+    background-color: #7AD6FF;
     box-shadow: 0 0 10px var(--color-primary);
 }
 
@@ -242,7 +219,7 @@ label {
     margin-top: 15px;
     margin-bottom: 5px;
     font-weight: 700;
-    color: var(--color-secondary); /* Étiquettes en violet */
+    color: var(--color-secondary); 
 }
 input[type="text"], input[type="email"], textarea {
     padding: 10px;
@@ -265,9 +242,6 @@ input:focus, textarea:focus {
     border-left: 3px solid var(--color-secondary);
 }
 
-/* ------------------------------------------- */
-/* 8. Footer */
-/* ------------------------------------------- */
 
 footer {
     background-color: #000000;
@@ -277,9 +251,6 @@ footer {
     border-top: 1px solid #333333;
 }
 
-/* ------------------------------------------- */
-/* 9. Media Queries (Responsive Design) */
-/* ------------------------------------------- */
 
 @media (max-width: 768px) {
     
