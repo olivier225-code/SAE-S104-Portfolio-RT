@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Olivier Groguhé - Contact</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto+Mono:wght@400;700&display=swap" rel="stylesheet">
+</head>
+<body>
+
+    <header>
+        <div class="container">
+            <h1>Olivier Groguhé</h1>
+            <div class="hamburger">
+                <span></span><span></span><span></span>
+            </div>
+            <nav>
+                <a href="index.html">Accueil</a>
+                <a href="cv-competences.html">Compétences & Projets</a>
+                <a href="contact.html" class="active">Contact</a>
+            </nav>
+        </div>
+    </header>
+
+    <main class="terminal-container">
+        <section id="contact">
+            <h2>Contact</h2>
+            <p>Vous pouvez me contacter via le formulaire ci-dessous ou directement par email.</p>
+
+            <form action="https://formspree.io/f/xqkrldyb" method="POST">
+                <label for="name">Nom</label>
+                <input type="text" name="name" id="name" required>
+
+                <label for="email">Email</label>
+                <input type="email" name="email" id="email" required>
+
+                <label for="message">Message</label>
+                <textarea name="message" id="message" rows="5" required></textarea>
+
+                <button type="submit" class="button">Envoyer</button>
+            </form>
+
+            <div class="contact-links">
+                <a href="mailto:olivier.groguhe@example.com" class="contact-button secondary">✉️ olivier.groguhe@example.com</a>
+                <a href="https://github.com/Olivier-LR" target="_blank" class="contact-button secondary">💻 GitHub</a>
+                <a href="https://www.linkedin.com/in/olivier-groguhe" target="_blank" class="contact-button secondary">🔗 LinkedIn</a>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2025 Olivier Groguhé - BUT R&T</p>
+    </footer>
+
+    <script>
+        const burger = document.querySelector('.hamburger');
+        const nav = document.querySelector('nav');
+        burger.addEventListener('click', () => nav.classList.toggle('active'));
+    </script>
+</body>
+</html>
