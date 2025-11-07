@@ -5,13 +5,13 @@
 }
 
 :root {
-    --color-primary: #2563EB;     /* Bleu pro */
-    --color-secondary: #8B5CF6;   /* Violet doux */
-    --color-bg: #F4F6FA;          /* Fond clair */
-    --color-text: #222;           /* Texte principal */
-    --color-card: #FFFFFF;        /* Cartes */
-    --color-header: #0F172A;      /* Bleu marine */
-    --color-footer: #1E293B;      /* Footer plus clair */
+    --color-primary: #2563EB;    
+    --color-secondary: #8B5CF6;   
+    --color-bg: #F4F6FA;
+    --color-text: #222;           
+    --color-card: #FFFFFF;       
+    --color-header: #0F172A;     
+    --color-footer: #1E293B;    
 }
 body {
     font-family: 'Roboto Mono', monospace;
