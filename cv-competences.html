@@ -8,9 +8,13 @@
     <link href="https://fonts.googleapis.com/css2?family=Roboto+Mono:wght@400;700&display=swap" rel="stylesheet">
 </head>
 <body>
+
     <header>
         <div class="container">
             <h1>Olivier Groguhé</h1>
+            <div class="hamburger">
+                <span></span><span></span><span></span>
+            </div>
             <nav>
                 <a href="index.html">Accueil</a>
                 <a href="cv-competences.html" class="active">Compétences & Projets</a>
@@ -20,68 +24,68 @@
     </header>
 
     <main class="terminal-container">
-        <section id="formation">
-
-            <h2>Mon Parcours Académique</h2>
-            
-            <article class="experience">
-                <h3>BUT Réseaux et Télécommunications (1ère Année)</h3>
-                <p class="date">IUT de La Rochelle - 2025/2026 (En cours)</p>
-                <ul>
-                    <li>Acquisition des bases en administration systèmes (Windows/Linux) et fondements des réseaux (modèle OSI, TCP/IP).</li>
-                    <li>Développement d'applications informatiques pour les R&T (web et scripts).</li>
-                </ul>
-            </article>
-
-            <article class="experience">
-                <h3>Baccalauréat technologique STI2D- mention bien</h3>
-                <p class="date">Lycée Léonce Vieljeux - 2024/2025</p>
-                <ul>
-                    <li>Spécialité : SIN (Systèmes d'Information et Numérique).</li>
-                </ul>
-            </article>
-        </section>
-
-        <section id="competences-techniques">
-
-            <h2>Compétences Techniques </h2>
-            
+        <section id="competences">
+            <h2>Compétences Techniques</h2>
             <div class="skills-grid">
                 <div class="skill-item">
-                    <p>HTML5 / CSS3 (Responsive Design)</p>
-                    <div class="skill-bar"><div class="skill-level" style="width: 85%;"></div></div>
+                    <p>Administration Linux / Windows</p>
+                    <div class="skill-bar"><div class="skill-level" style="width:80%"></div></div>
                 </div>
                 <div class="skill-item">
-                    <p>Administration Linux (Ligne de commande, Bash)</p>
-                    <div class="skill-bar"><div class="skill-level" style="width: 65%;"></div></div>
+                    <p>Configuration Réseaux (Cisco, IPv4, VLAN)</p>
+                    <div class="skill-bar"><div class="skill-level" style="width:75%"></div></div>
                 </div>
                 <div class="skill-item">
-                    <p>Réseaux (Protocoles de base, Câblage)</p>
-                    <div class="skill-bar"><div class="skill-level" style="width: 70%;"></div></div>
+                    <p>HTML / CSS / JavaScript</p>
+                    <div class="skill-bar"><div class="skill-level" style="width:85%"></div></div>
                 </div>
                 <div class="skill-item">
-                    <p>Virtualisation (VirtualBox / Proxmox)</p>
-                    <div class="skill-bar"><div class="skill-level" style="width: 40%;"></div></div>
+                    <p>Python / Bash</p>
+                    <div class="skill-bar"><div class="skill-level" style="width:70%"></div></div>
                 </div>
             </div>
         </section>
-        
-        <section id="projets">
 
-            <h2>Mes Premières Réalisations (SAÉ)</h2>
-            <article class="project-card">
-                <h3>SAÉ S104 - Ce Portfolio Web (HTML/CSS)</h3>
-                <p>Réalisation : Conception et développement d'un site web personnel professionnel, respectant l'accessibilité et le responsive design sans framework.</p>
-            </article>
-            <article class="project-card">
-                <h3>SAÉ S102 - Premiers pas en Programmation</h3>
-                <p>Réalisation : Développement de scripts simples en Python ou Bash pour automatiser des tâches d'administration système.</p>
-            </article>
+        <section id="projets">
+            <h2>Projets Réalisés (SAÉ)</h2>
+            <div class="grid-section">
+                <div class="project-card">
+                    <h3>SAÉ 101 — Administration Réseau</h3>
+                    <p>Création d’un réseau local fonctionnel avec VLAN et routage entre sous-réseaux.</p>
+                </div>
+                <div class="project-card">
+                    <h3>SAÉ 102 — Programmation</h3>
+                    <p>Développement d’un mini-script Python pour automatiser la configuration d’un serveur local.</p>
+                </div>
+                <div class="project-card">
+                    <h3>SAÉ 104 — Présentation sur Internet</h3>
+                    <p>Création de ce portfolio personnel en HTML/CSS avec hébergement sur GitHub Pages.</p>
+                </div>
+            </div>
+        </section>
+
+        <section id="formation">
+            <h2>Formation</h2>
+            <div class="experience">
+                <h3>BUT Réseaux & Télécommunications</h3>
+                <p class="date">2024 – 2027 | IUT de La Rochelle</p>
+                <p>Apprentissage de l’administration réseau, télécoms, cybersécurité et développement.</p>
+            </div>
+        </section>
+
+        <section id="cta">
+            <a href="contact.html" class="button">Me Contacter &gt;&gt;</a>
         </section>
     </main>
 
     <footer>
         <p>&copy; 2025 Olivier Groguhé - BUT R&T</p>
     </footer>
+
+    <script>
+        const burger = document.querySelector('.hamburger');
+        const nav = document.querySelector('nav');
+        burger.addEventListener('click', () => nav.classList.toggle('active'));
+    </script>
 </body>
 </html>
