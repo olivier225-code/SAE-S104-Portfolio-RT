@@ -3,82 +3,60 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Olivier Groguhé - BUT R&amp;T | Présentation</title>
+    <title>Olivier Groguhé - BUT Réseaux & Télécommunications</title>
     <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto+Mono:wght@400;700&display=swap" rel="stylesheet">
 </head>
 <body>
 
     <header>
         <div class="container">
-            <h1>&gt; Olivier Groguhé</h1>
+            <h1>Olivier Groguhé</h1>
+            <div class="hamburger">
+                <span></span><span></span><span></span>
+            </div>
             <nav>
                 <a href="index.html">Accueil</a>
-                <a href="but-rt.html" class="active">BUT R&amp;T</a>
-                <a href="cv-competences.html">Compétences</a>
+                <a href="cv-competences.html">Compétences & Projets</a>
                 <a href="contact.html">Contact</a>
             </nav>
         </div>
     </header>
 
     <main class="terminal-container">
-        <h2>Présentation du BUT Réseaux &amp; Télécommunications</h2>
-
-        <section class="formation-objectifs">
-            <h3>🎯 Les Objectifs de la Formation</h3>
+        <section id="but-rt">
+            <h2>Le BUT Réseaux & Télécommunications</h2>
+            <p>
+                Le BUT R&T (Réseaux et Télécommunications) forme des techniciens supérieurs capables de déployer,
+                administrer et sécuriser des infrastructures informatiques et télécoms.
+            </p>
+            <p>
+                Le programme se concentre sur quatre blocs de compétences :
+            </p>
             <ul>
-                <li>Administrer et superviser des infrastructures réseaux et systèmes.</li>
-                <li>Sécuriser les services et les données d’une organisation.</li>
-                <li>Concevoir, déployer et maintenir des architectures de communication performantes.</li>
-                <li>Accompagner la transformation numérique des entreprises et collectivités.</li>
+                <li>Conception, déploiement et maintenance de réseaux informatiques</li>
+                <li>Administration des systèmes d’exploitation (Linux / Windows)</li>
+                <li>Programmation et automatisation</li>
+                <li>Cybersécurité et communication numérique</li>
             </ul>
-        </section>
 
-        <section class="competences-section">
-            <h3>💡 Les 5 Compétences du Diplômé (Référentiel)</h3>
-
-            <div class="competence-grid">
-                <div class="competence-card">
-                    <h4>1️⃣ Administrer les Systèmes et les Réseaux</h4>
-                    <p>Mettre en œuvre, configurer et maintenir les systèmes d’exploitation, serveurs et réseaux d’entreprise.</p>
-                </div>
-
-                <div class="competence-card">
-                    <h4>2️⃣ Connecter les Entreprises et les Usagers</h4>
-                    <p>Installer, configurer et superviser les équipements de communication et les services réseaux.</p>
-                </div>
-
-                <div class="competence-card">
-                    <h4>3️⃣ Créer des Outils et Applications pour les Réseaux</h4>
-                    <p>Développer des scripts, outils d’administration et applications liées à la gestion réseau.</p>
-                </div>
-
-                <div class="competence-card">
-                    <h4>4️⃣ Sécuriser les Infrastructures et les Données</h4>
-                    <p>Déployer des politiques de sécurité, gérer les accès, et prévenir les risques liés à la cybersécurité.</p>
-                </div>
-
-                <div class="competence-card">
-                    <h4>5️⃣ Piloter des Projets Techniques</h4>
-                    <p>Planifier, collaborer et conduire des projets en respectant les contraintes techniques et organisationnelles.</p>
-                </div>
+            <div class="note-reflexion">
+                <strong>Mon objectif :</strong> Acquérir des compétences solides pour évoluer vers des métiers tels que
+                administrateur réseau, technicien cybersécurité ou ingénieur systèmes.
             </div>
-        </section>
 
-        <section class="debouches-section">
-            <h3>🚀 Poursuite d'Études &amp; Débouchés</h3>
-            <p>Le BUT Réseaux &amp; Télécommunications ouvre la voie à de nombreuses opportunités professionnelles et académiques :</p>
-            <ul>
-                <li>Licence Professionnelle ou Master en Cybersécurité, Cloud ou Réseaux Avancés.</li>
-                <li>Écoles d’ingénieurs en télécommunications, systèmes embarqués ou informatique.</li>
-                <li>Emplois : Administrateur Réseau, Technicien Systèmes, Consultant en Sécurité, Ingénieur Réseaux Junior.</li>
-            </ul>
+            <a href="cv-competences.html" class="button">Voir mes Compétences &gt;&gt;</a>
         </section>
-
     </main>
 
     <footer>
-        <p>&copy; 2025 Olivier Groguhé - Tous droits réservés.</p>
+        <p>&copy; 2025 Olivier Groguhé - BUT R&T</p>
     </footer>
 
+    <script>
+        const burger = document.querySelector('.hamburger');
+        const nav = document.querySelector('nav');
+        burger.addEventListener('click', () => nav.classList.toggle('active'));
+    </script>
 </body>
 </html>
