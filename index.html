@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Olivier Groguhé - BUT R&T | Accueil</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto+Mono:wght@400;700&display=swap" rel="stylesheet">
+</head>
+<body>
+
+    <!-- ====== HEADER ====== -->
+    <header>
+        <div class="container">
+            <h1>Olivier Groguhé</h1>
+
+            <!-- Bouton hamburger (visible seulement sur mobile) -->
+            <div class="hamburger">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+
+            <!-- Navigation -->
+            <nav>
+                <a href="index.html" class="active">Accueil</a>
+                <a href="cv-competences.html">Compétences & Projets</a>
+                <a href="contact.html">Contact</a>
+            </nav>
+        </div>
+    </header>
+
+    <!-- ====== CONTENU PRINCIPAL ====== -->
+    <main class="terminal-container">
+        <section id="accueil" class="terminal-content">
+            <div class="intro-text">
+                <p>
+                    Bonjour ! Je suis <strong>Olivier Groguhé</strong>, étudiant en première année de BUT Réseaux et Télécommunications (R&T) à l'IUT de La Rochelle.
+                </p>
+                <p>
+                    Passionné par l'infrastructure numérique, je développe activement mes connaissances en <strong>administration réseau</strong>, <strong>systèmes d'exploitation (Linux)</strong> et <strong>programmation web</strong>.
+                    Mon objectif est de devenir un technicien polyvalent, capable de concevoir et de sécuriser les solutions IT de demain.
+                </p>
+                <p>
+                    Ce portfolio a été réalisé dans le cadre de la SAÉ S104 - <em>Se présenter sur Internet</em>, afin de valoriser mes premiers acquis professionnels.
+                </p>
+            </div>
+        </section>
+
+        <section id="qualites">
+            <h2>Mes Atouts Professionnels</h2>
+            <div class="grid-section">
+                <div class="qualite-card">
+                    <h3>Rigueur et Méthode</h3>
+                    <p>Application stricte des protocoles et des normes, essentielle en administration réseau.</p>
+                </div>
+                <div class="qualite-card">
+                    <h3>Esprit d'Équipe</h3>
+                    <p>Collaboration efficace lors des projets (SAÉ) et partage des connaissances techniques.</p>
+                </div>
+                <div class="qualite-card">
+                    <h3>Curiosité Technique</h3>
+                    <p>Fort intérêt pour les nouvelles technologies (Cloud, Cybersécurité, Réseaux).</p>
+                </div>
+            </div>
+        </section>
+
+        <section id="cta">
+            <a href="cv-competences.html" class="button">Consulter mon Profil Technique & Projets &gt;&gt;</a>
+        </section>
+    </main>
+
+    <!-- ====== PIED DE PAGE ====== -->
+    <footer>
+        <p>&copy; 2025 Olivier Groguhé - BUT R&T</p>
+    </footer>
+
+    <!-- ====== SCRIPT MENU HAMBURGER ====== -->
+    <script>
+        const burger = document.querySelector('.hamburger');
+        const nav = document.querySelector('nav');
+        burger.addEventListener('click', () => {
+            nav.classList.toggle('active');
+        });
+    </script>
+
+</body>
+</html>
